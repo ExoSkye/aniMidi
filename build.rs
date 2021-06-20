@@ -3,8 +3,8 @@ use cmake::Config;
 
 fn main()
 {
-    let dst = Config::new("portmidi").build_target("portmidi-static").build();
+    let dst = Config::new("portmidi").define("BUILD_TESTING","NO").build_target("install").build();
 
-    println!("cargo:rustc-link-search=native={}", dst.display());
-    println!("cargo:rustc-link-lib=static=portmidi");
+    println!("cargo:rustc-link-search=native={}/lib", dst.display());
+    println!("cargo:rustc-link-lib=dylib=portmidi");
 }
