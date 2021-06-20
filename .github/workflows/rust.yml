@@ -20,7 +20,7 @@ jobs:
       with:
           submodules: 'recursive'
     - name: Install Dependencies
-      run: sudo apt install libalsa-dev
+      run: sudo apt install libasound2-dev
     - name: Build
       run: cargo build --verbose
     - name: Run tests
