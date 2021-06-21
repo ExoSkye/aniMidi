@@ -10,7 +10,6 @@ build="build.rs"
 cmake = "*"
 
 [dependencies]
-portmidi = "*"
 imgui = "*"
 winit = "*"
 imgui-winit-support = "*"
